@@ -5,19 +5,19 @@ window.onload = function() {
 
   // Initialising the image pattern
   var img = new Image();
-  img.src = "assets/images/bkg.png";
-  var pattern = ctx.createPattern(img, "repeat");
+  img.src = 'assets/images/bkg.png';
+  var pattern = ctx.createPattern(img, 'repeat');
 
   // Setting the width and height of the canvas
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight - document.body.offsetHeight;
+  canvas.height = document.getElementsByTagName('header')[0].offsetHeight / 2;
 
   // Setting up the letters
   var letters = 'uzhguys';
   letters = letters.split('');
 
   // Setting up the columns
-  var fontSize = ~~(Math.random() * 20) + 10,
+  var fontSize = canvas.height / 10,
       columns = canvas.width / fontSize;
   ctx.font = `${fontSize}px sans-serif`;
 
@@ -44,5 +44,5 @@ window.onload = function() {
   }
 
   // Loop the animation
-  setInterval(draw, ~~(Math.random() * 200) + 100);
+  setInterval(draw, canvas.height);
 };
