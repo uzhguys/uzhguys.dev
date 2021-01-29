@@ -21,12 +21,14 @@
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
         <section id="downloads">
-          <a href="{{ site.github.repository_url }}" class="btn btn-github" target="_blank" rel="noopener noreferrer"><span class="icon"></span>View on GitHub</a>
           <a href="/join" class="btn btn-join"><span class="icon"></span>Join us</a>
+          <a href="/career" class="btn btn-github"><span class="icon"></span>Open positions</a>
           <a href="/contacts" class="btn btn-email"><span class="icon"></span>Contact us</a>
         </section>
       </div>
     </header>
+
+    <canvas id="matrix" width="0" height="0"></canvas>
 
     <div class="container">
       <section id="main_content">
@@ -34,7 +36,9 @@
       </section>
     </div>
 
-    <canvas id="matrix" width="0" height="0"></canvas>
+    <footer id="copyright">
+      ⓒ 2021 [uzhguys]
+    </footer>
 
     {% if site.google_analytics %}
       <!-- Global site tag (gtag.js) - Google Analytics -->
